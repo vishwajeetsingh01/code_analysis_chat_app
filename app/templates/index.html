@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Review Application</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script defer src="/static/script.js"></script>
+
+</head>
+<body>
+    <div id="chatbox">
+        <h2>🚀 AI Code Review Application</h2>
+        <!-- <h2>AI Code Review Application</h2> -->
+        <h4>Upload your code file for an instant AI review.</h4>
+        <input type="file" id="codeFile" accept=".py,.js,.java,.cpp,.txt,.css,.html,.sql" onchange="handleFileUpload()" />
+        <div id="uploadStatus"></div>
+        <br>
+        <button onclick="sendCode()">Submit for Review</button>
+        <button onclick="downloadPDF()">Download as PDF</button>
+        <div id="responseBox"></div>
+    </div>
+</body>
+</html>
